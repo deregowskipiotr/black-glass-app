@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-gold: #544317;
+    --color-white-off: #F8F7F4;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Old Standard TT', serif !important;
+    color: var(--color-white-off); /* Set default text color */
+  }
+}
+
+@layer components {
+  .bg-main {
+    background-image: url('/images/bg-black3.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+  }
+  
+  /* Gold color utility */
+  .text-gold {
+    color: var(--color-gold);
+  }
+  
+  .border-gold {
+    border-color: var(--color-gold);
+  }
+  
+  .bg-gold {
+    background-color: var(--color-gold);
+  }
+  
+  /* White-off color utility */
+  .text-white-off {
+    color: var(--color-white-off);
+  }
+  
+  .border-white-off {
+    border-color: var(--color-white-off);
+  }
+  
+  .bg-white-off {
+    background-color: var(--color-white-off);
+  }
+}
