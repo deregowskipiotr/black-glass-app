@@ -8,7 +8,7 @@ export function Hero() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         {/* Title - appears from top */}
         <motion.h1 
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 md:mb-12 -mt-60 md:mt-0 leading-relaxed md:leading-28"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-10 md:mb-12 -mt-60 md:-mt-20 leading-relaxed md:leading-28"
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ 
@@ -62,7 +62,7 @@ export function Hero() {
               size="default"
               defaultText="Products"
               hoverText="View Portfolio →"
-              className="w-84 md:w-72 h-12 md:h-14"
+              className="w-full sm:w-84 md:w-72 h-12 md:h-14"
             />
           </motion.div>
 
@@ -77,7 +77,7 @@ export function Hero() {
               size="default"
               defaultText="Get in Touch"
               hoverText="Let's Talk →"
-              className="w-84 md:w-72 h-12 md:h-14"
+              className="w-full sm:w-84 md:w-72 h-12 md:h-14"
             />
           </motion.div>
         </motion.div>

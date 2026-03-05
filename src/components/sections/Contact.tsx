@@ -115,7 +115,7 @@ export function Contact() {
                   size="default"
                   defaultText="Send Message"
                   hoverText="Sláinte! "
-                  className="md:w-72 w-78 h-12 md:pt-1"
+                  className="w-full sm:w-84 md:w-72 h-12 md:pt-1"
                   type="submit"
                 />
               </div>
@@ -181,7 +181,7 @@ export function Contact() {
               <h4 className="text-sm font-medium text-(--color-white-off)/60 mb-4 tracking-wider uppercase">
                 Find us where the ice never melts
               </h4>
-              <div className="flex gap-4">
+              <div className="flex gap-4 justify-center md:justify-start">
                 <a 
                   href="#" 
                   className="w-12 h-12 rounded-full border border-(--color-gold)/30 bg-black/40 flex items-center justify-center text-(--color-white-off) hover:text-(--color-gold) hover:border-(--color-gold) hover:bg-(--color-gold)/10 transition-all duration-300 group"

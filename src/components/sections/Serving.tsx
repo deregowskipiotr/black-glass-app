@@ -65,7 +65,7 @@ export function Serving() {
           {servingMethods.map((method, index) => (
             <motion.div
               key={method.name}
-              className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-xl p-6 group hover:border-(--color-gold)/60 transition-all duration-500"
+              className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-xl p-6 group hover:border-(--color-gold)/60 transition-all duration-500 flex flex-col h-full"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -88,13 +88,15 @@ export function Serving() {
                 {method.description}
               </p>
               
-              <p className="text-(--color-white-off)/50 text-xs italic border-t border-(--color-gold)/20 pt-3">
-                {method.quote}
-              </p>
-              
-              <p className="text-(--color-white-off)/40 text-xs mt-3">
-                <span className="text-(--color-gold)">Best for:</span> {method.perfectFor}
-              </p>
+              <div className="mt-auto pt-4 flex flex-col gap-3">
+                <p className="text-(--color-white-off)/50 text-xs italic border-t border-(--color-gold)/20 pt-3">
+                  {method.quote}
+                </p>
+                
+                <p className="text-(--color-white-off)/40 text-xs">
+                  <span className="text-(--color-gold)">Best for:</span> {method.perfectFor}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

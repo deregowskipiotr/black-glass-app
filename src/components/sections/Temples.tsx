@@ -9,7 +9,7 @@ const distilleries = [
     established: "1839",
     signature: "Twelve-point stag, sherry cask masters",
     description: "Where the Mackenzie family shaped whisky history. Their stills have flat tops and wide necks—unique in Scotland—creating that rich, heavy style. The current manager's family has worked here for four generations. Four.",
-    image: "/images/dalmore.jpg", // you'll need to add this
+    bgClass: "bg-dalmore", // you'll need to add this image
     color: "from-amber-900/30"
   },
   {
@@ -18,7 +18,7 @@ const distilleries = [
     established: "1923",
     signature: "Mizunara oak, zen precision",
     description: "Japan's first malt distillery, hidden in a bamboo forest. The water runs through ancient rock, filtered by nature. Their Mizunara casks—made from 200-year-old oaks—add sandalwood and coconut you'll find nowhere else on Earth.",
-    image: "/images/yamazaki.jpg",
+    bgClass: "bg-yamazaki",
     color: "from-emerald-900/30"
   },
   {
@@ -27,8 +27,8 @@ const distilleries = [
     established: "1792",
     signature: "Warehouse H, single barrel legends",
     description: "The oldest continuously operating distillery in America. They've never stopped—not during Prohibition (they made 'medicinal' whiskey), not during war, not ever. Walk into Warehouse H and the ghost of Colonel E.H. Taylor is still there, checking barrels.",
-    image: "/images/buffalo-trace.jpg",
-    color: "from-amber-800/30"
+    bgClass: "bg-buffalo-trace",
+    color: "from-amber-500/30"
   },
   {
     name: "Bushmills",
@@ -36,14 +36,14 @@ const distilleries = [
     established: "1608",
     signature: "Triple distillation, 415 years of water from Saint Columb's Rill",
     description: "The world's oldest licensed whiskey distillery. King James I granted the license in 1608, and they've been making whiskey on the same spot ever since. The water still comes from the same tributary—Saint Columb's Rill—filtered through ancient basalt.",
-    image: "/images/bushmills.jpg",
+    bgClass: "bg-bushmills",
     color: "from-blue-900/30"
   }
 ];
 
 export function Temples() {
   return (
-    <section id="temples" className="py-24 md:py-32 bg-black/20">
+    <section id="temples" className="py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -52,7 +52,7 @@ export function Temples() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-6xl font-bold font-['Old_Standard_TT'] mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-(--color-white-off)">The Four </span>
             <span className="text-(--color-gold)">Temples</span>
           </h2>
@@ -65,7 +65,7 @@ export function Temples() {
           {distilleries.map((distillery, index) => (
             <motion.div
               key={distillery.name}
-              className={`relative bg-linear-to-br ${distillery.color} to-black/90 backdrop-blur-sm border border-(--color-gold)/20 rounded-xl overflow-hidden group`}
+              className={`relative flex flex-col h-full bg-linear-to-br ${distillery.color} to-black/90 backdrop-blur-sm border border-(--color-gold)/20 rounded-xl overflow-hidden group`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -73,11 +73,10 @@ export function Temples() {
             >
               {/* Background image overlay */}
               <div 
-                className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 bg-cover bg-center"
-                style={{ backgroundImage: `url(${distillery.image})` }}
+                className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-700 bg-cover bg-center ${distillery.bgClass}`}
               />
               
-              <div className="relative p-8">
+              <div className="relative p-8 flex flex-col flex-1">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-2xl md:text-3xl font-bold text-(--color-gold) font-['Old_Standard_TT']">
                     {distillery.name}
@@ -93,10 +92,10 @@ export function Temples() {
                   "{distillery.signature}"
                 </p>
                 
-                <p className="text-(--color-white-off)/70 text-sm leading-relaxed">
+                <p className="text-(--color-white-off)/70 text-base leading-relaxed">
                   {distillery.description}                </p>
                 
-                <div className="mt-6 pt-4 border-t border-(--color-gold)/20">
+                <div className="mt-auto pt-6 border-t border-(--color-gold)/20 w-full">
                   <button type="button" className="text-(--color-gold) transition-colors text-sm flex items-center gap-2 group cursor-pointer">
                     <span>Plan your pilgrimage</span>
                     <span className="group-hover:translate-x-1 transition-transform">→</span>

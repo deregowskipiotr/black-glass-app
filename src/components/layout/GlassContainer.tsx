@@ -18,8 +18,8 @@ export const GlassContainer = ({ children }: GlassContainerProps) => {
         shadow-2xl
         mx-auto
       ">
-        {/* Content padding */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Content wrapper */}
+        <div className="w-full h-full">
           {children}
         </div>
       </div>

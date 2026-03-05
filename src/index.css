@@ -52,4 +52,21 @@
   .bg-white-off {
     background-color: var(--color-white-off);
   }
+
+  /* Distillery background utilities */
+  .bg-dalmore {
+    background-image: url('/images/dalmore.jpg');
+  }
+  
+  .bg-yamazaki {
+    background-image: url('/images/yamazaki.jpg');
+  }
+  
+  .bg-buffalo-trace {
+    background-image: url('/images/buffalo-trace.jpg');
+  }
+  
+  .bg-bushmills {
+    background-image: url('/images/bushmills.jpg');
+  }
 }

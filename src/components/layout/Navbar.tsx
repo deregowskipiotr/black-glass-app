@@ -64,20 +64,20 @@ export function Navbar() {
 
   return (
     <>
-      {/* fixed navbar - always visible */}
+      {/* sticky navbar - stays inside the GlassContainer bounds */}
       <motion.header
-        className="fixed inset-x-0 top-0 z-50"
+        className="sticky top-0 z-50 w-full"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="mx-auto mt-3 w-full max-w-7xl px-3 md:px-5">
+        <div className="mx-auto mt-3 w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           <div 
             className={cn(
               "w-full rounded-md border transition-all duration-300",
               isScrolled 
-                ? "bg-black/10 border-(--color-gold)/40 backdrop-blur-sm shadow-lg shadow-(--color-gold)/10" 
-                : "bg-black/10 border-(--color-gold)/30"
+                ? "bg-black/80 border-(--color-gold)/40 backdrop-blur-sm shadow-lg shadow-(--color-gold)/10" 
+                : "bg-black/20 border-(--color-gold)/20"
             )}
           >
             {/* DESKTOP / TABLET */}
@@ -168,11 +168,10 @@ export function Navbar() {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -20, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed inset-x-0 top-[72px] z-40 md:hidden"
+            className="absolute inset-x-0 top-[72px] z-40 md:hidden pb-4"
           >
-            <div className="mx-auto w-full max-w-7xl px-3">
-              <div className="rounded-md bg-black/10 backdrop-blur-xl shadow-2xl shadow-(--color-gold)/10 mt-1">
+            <div className="mx-auto w-full max-w-7xl px-4 sm:px-6">
+              <div className="rounded-md bg-black/10 md:bg-black/10 backdrop-blur-3xl shadow-2xl shadow-(--color-gold)/10 mt-1">
                 <div className="px-5 py-6">
                   {/* Mobile Navigation Links */}
                   <motion.ul
