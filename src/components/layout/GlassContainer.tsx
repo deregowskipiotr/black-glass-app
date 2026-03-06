@@ -18,10 +18,7 @@ export const GlassContainer = ({ children }: GlassContainerProps) => {
         shadow-2xl
         mx-auto
       ">
-        {/* Content wrapper */}
-        <div className="w-full h-full">
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   );

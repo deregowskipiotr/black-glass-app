@@ -22,7 +22,7 @@ const ButtonGold: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <div className="relative inline-block group">
+    <div className="relative block group">
       {/* Subtle gold glow at bottom */}
       <div
         className={cn(
@@ -160,5 +160,7 @@ const ButtonGold: React.FC<ButtonProps> = ({
     </div>
   );
 };
+
+ButtonGold.displayName = 'ButtonGold';
 
 export default ButtonGold;

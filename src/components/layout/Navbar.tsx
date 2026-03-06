@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/constants";
+import { cn } from "@/lib/utils";
 import ButtonGold from "@/components/ui/ButtonGold";
 
 export function Navbar() {
@@ -10,12 +11,13 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeHash, setActiveHash] = useState<string>("#home");
 
-  // change style on scroll
+  // Update scroll state and close mobile menu on scroll
   useEffect(() => {
     const onScroll = () => {
       setIsScrolled(window.scrollY > 10);
+      setMobileOpen(false); // close menu when user starts scrolling
     };
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -32,11 +34,9 @@ export function Navbar() {
       (entries) => {
         const visible = entries
           .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              (a.target as HTMLElement).offsetTop -
-              (b.target as HTMLElement).offsetTop
-          );
+          // Sort by distance to the top of the viewport — the closest visible
+          // section wins, giving accurate active-link tracking while scrolling
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
 
         if (visible[0]) {
           const id = visible[0].target.id;
@@ -98,6 +98,7 @@ export function Navbar() {
                     <a
                       key={link.href}
                       href={link.href}
+                      aria-current={isActive ? "page" : undefined}
                       className={cn(
                         "relative pb-1 transition-all duration-300 group",
                         isActive 
@@ -231,7 +232,4 @@ export function Navbar() {
   );
 }
 
-// Helper function for conditional classes
-const cn = (...classes: (string | boolean | undefined)[]) => {
-  return classes.filter(Boolean).join(' ');
-};
+// cn helper is now imported from @/lib/utils
