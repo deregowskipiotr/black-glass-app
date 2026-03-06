@@ -35,7 +35,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-6xl font-bold font-['Old_Standard_TT'] mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold mb-4">
             <span className="text-(--color-white-off)">Drop Us a </span>
             <span className="text-(--color-gold)">Dram</span>
           </h2>
@@ -50,9 +50,9 @@ export function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="border border-(--color-gold)/30 rounded-xl p-6 md:p-8 bg-black/20 backdrop-blur-sm"
+            className="border border-(--color-gold)/30 rounded-md p-6 md:p-8 bg-black/20 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-bold text-(--color-white-off) mb-6 font-['Old_Standard_TT']">
+            <h3 className="text-2xl font-bold text-(--color-white-off) mb-6">
               Send a carrier pigeon<span className="text-(--color-gold)">.</span> Or use this form.
             </h3>
             
@@ -69,7 +69,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-(--color-gold)/30 rounded-lg focus:outline-none focus:border-(--color-gold) focus:ring-1 focus:ring-(--color-gold) text-(--color-white-off) placeholder:text-(--color-white-off)/30 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/40 border border-(--color-gold)/30 rounded-md focus:outline-none focus:border-(--color-gold) focus:ring-1 focus:ring-(--color-gold) text-(--color-white-off) placeholder:text-(--color-white-off)/30 transition-all duration-300"
                   placeholder="e.g., William Grant's"
                 />
               </div>
@@ -86,7 +86,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-black/40 border border-(--color-gold)/30 rounded-lg focus:outline-none focus:border-(--color-gold) focus:ring-1 focus:ring-(--color-gold) text-(--color-white-off) placeholder:text-(--color-white-off)/30 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-black/40 border border-(--color-gold)/30 rounded-md focus:outline-none focus:border-(--color-gold) focus:ring-1 focus:ring-(--color-gold) text-(--color-white-off) placeholder:text-(--color-white-off)/30 transition-all duration-300"
                   placeholder="you@highlandpark.com"
                 />
               </div>
@@ -103,7 +103,7 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 bg-black/40 border border-(--color-gold)/30 rounded-lg focus:outline-none focus:border-(--color-gold) focus:ring-1 focus:ring-(--color-gold) text-(--color-white-off) placeholder:text-(--color-white-off)/30 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-black/40 border border-(--color-gold)/30 rounded-md focus:outline-none focus:border-(--color-gold) focus:ring-1 focus:ring-(--color-gold) text-(--color-white-off) placeholder:text-(--color-white-off)/30 transition-all duration-300 resize-none"
                   placeholder="Tell us about your favorite dram, ask a question, or just say hello..."
                 />
               </div>
@@ -151,13 +151,13 @@ export function Contact() {
             className="flex flex-col"
           >
             {/* Quote Card */}
-            <div className="bg-black/20 backdrop-blur-sm border border-(--color-gold)/30 rounded-xl p-8 mb-8 relative overflow-hidden group">
+            <div className="bg-black/20 backdrop-blur-sm border border-(--color-gold)/30 rounded-md p-8 mb-8 relative overflow-hidden group">
               {/* Decorative ice cube effect */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-(--color-gold)/5 rounded-full blur-2xl group-hover:bg-(--color-gold)/10 transition-all duration-700" />
               
               <div className="relative">
                 <span className="text-6xl text-(--color-gold)/20 font-serif absolute -top-4 -left-2">"</span>
-                <p className="text-xl md:text-2xl text-(--color-white-off)/90 leading-relaxed mb-6 relative z-10 font-['Old_Standard_TT'] italic pl-4">
+                <p className="text-xl md:text-2xl text-(--color-white-off)/90 leading-relaxed mb-6 relative z-10 italic pl-4">
                   I'm not saying whisky solves all problems, but have you ever seen anyone drink whisky and argue about which ice cube tray is superior?
                 </p>
                 <div className="flex items-center justify-between">

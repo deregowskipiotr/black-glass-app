@@ -65,7 +65,7 @@ export function Serving() {
           {servingMethods.map((method, index) => (
             <motion.div
               key={method.name}
-              className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-xl p-6 group hover:border-(--color-gold)/60 transition-all duration-500 flex flex-col h-full"
+              className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-md p-6 group hover:border-(--color-gold)/60 transition-all duration-500 flex flex-col h-full"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

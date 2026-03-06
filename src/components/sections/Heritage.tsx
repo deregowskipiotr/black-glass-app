@@ -54,22 +54,22 @@ export function Heritage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-lg p-6 text-center">
+            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-md p-6 text-center">
               <Wheat className="w-8 h-8 text-(--color-gold) mx-auto mb-3" />
               <span className="text-2xl font-bold text-(--color-white-off)">1494</span>
               <p className="text-(--color-white-off)/60 text-sm">First written record</p>
             </div>
-            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-lg p-6 text-center">
+            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-md p-6 text-center">
               <Flame className="w-8 h-8 text-(--color-gold) mx-auto mb-3" />
               <span className="text-2xl font-bold text-(--color-white-off)">1824</span>
               <p className="text-(--color-white-off)/60 text-sm">First legal distilleries</p>
             </div>
-            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-lg p-6 text-center">
+            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-md p-6 text-center">
               <Droplet className="w-8 h-8 text-(--color-gold) mx-auto mb-3" />
               <span className="text-2xl font-bold text-(--color-white-off)">1909</span>
               <p className="text-(--color-white-off)/60 text-sm">Blended Scotch defined</p>
             </div>
-            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-lg p-6 text-center">
+            <div className="bg-black/40 backdrop-blur-sm border border-(--color-gold)/20 rounded-md p-6 text-center">
               <Clock className="w-8 h-8 text-(--color-gold) mx-auto mb-3" />
               <span className="text-2xl font-bold text-(--color-white-off)">Today</span>
               <p className="text-(--color-white-off)/60 text-sm">Your turn to taste</p>

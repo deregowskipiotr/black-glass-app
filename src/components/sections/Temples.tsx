@@ -65,7 +65,7 @@ export function Temples() {
           {distilleries.map((distillery, index) => (
             <motion.div
               key={distillery.name}
-              className={`relative flex flex-col h-full bg-linear-to-br ${distillery.color} to-black/90 backdrop-blur-sm border border-(--color-gold)/20 rounded-xl overflow-hidden group`}
+              className={`relative flex flex-col h-full bg-linear-to-br ${distillery.color} to-black/90 backdrop-blur-sm border border-(--color-gold)/20 rounded-md overflow-hidden group`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
