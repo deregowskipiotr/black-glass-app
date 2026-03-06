@@ -18,9 +18,9 @@ export function Hero() {
             staggerChildren: 0.3
           }}
         >
-          <span className="text-(--color-white-off)">Whisky on Ice </span> <br />
+          <span className="text-(--color-white-off)">Hey Whisky, Ice </span> <br />
           <span className="text-(--color-gold)">to Meet </span>
-          <span className="text-(--color-white-off)">You </span>
+          <span className="text-(--color-white-off)">You! </span>
         </motion.h1>
 
         {/* Description - no animation (constant) */}
